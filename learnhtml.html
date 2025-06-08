@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Professor Rjab Service meyz's work</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #121212;
+      color: #ffffff;
+      margin: 0;
+      padding: 30px;
+      font-size: 18px;          /* حجم أكبر للنص */
+      line-height: 1.9;
+    }
+    h1 {
+      color: #003366;           /* أزرق غامق */
+      font-size: 3em;           /* عنوان رئيسي أكبر */
+      margin-bottom: 20px;
+    }
+    h2 {
+      color: #003366;           /* أزرق غامق */
+      font-size: 2em;           /* عناوين فرعية كبيرة */
+      margin-top: 30px;
+      margin-bottom: 10px;
+    }
+    .section {
+      margin-bottom: 40px;
+      background-color: #1e1e1e;
+      padding: 25px;
+      border-radius: 12px;
+    }
+    code {
+      background-color: #2e2e2e;
+      padding: 6px 12px;
+      border-radius: 5px;
+      font-family: 'Courier New', monospace;
+      color: #00ff88;
+      font-size: 1em;
+    }
+    pre {
+      background-color: #111;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-size: 0.95em;
+    }
+    ul {
+      padding-left: 25px;
+    }
+    a {
+      color: #003366;           /* أزرق غامق */
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Professor Rjab Service meyz's work</h1>
+
+  <div class="section">
+    <h2>What is Python?</h2>
+    <p>
+      Python is a high-level, interpreted programming language known for its readability and simplicity.
+      It supports multiple paradigms: procedural, object-oriented, and functional programming.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>1. Variables &amp; Data Types</h2>
+    <p>
+      • <strong>Variables</strong> are names bound to values. You don’t declare type explicitly:
+    </p>
+    <pre><code>age = 30
+name = "Alice"
+pi = 3.14159
+is_active = True</code></pre>
+    <p>
+      • <strong>Built-in Types</strong>:
+      <ul>
+        <li><code>int</code> (integers)</li>
+        <li><code>float</code> (floating-point numbers)</li>
+        <li><code>str</code> (strings)</li>
+        <li><code>bool</code> (True/False)</li>
+        <li><code>list</code>, <code>tuple</code>, <code>dict</code>, <code>set</code></li>
+      </ul>
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>2. Control Flow</h2>
+    <p>• <strong>If / Elif / Else</strong>:</p>
+    <pre><code>score = 85
+if score >= 90:
+    print("A")
+elif score >= 80:
+    print("B")
+else:
+    print("C")</code></pre>
+    <p>• <strong>Loops</strong>:</p>
+    <pre><code># For loop over a list
+for item in [1, 2, 3]:
+    print(item)
+
+# While loop
+count = 0
+while count < 3:
+    print(count)
+    count += 1</code></pre>
+  </div>
+
+  <div class="section">
+    <h2>3. Functions</h2>
+    <p>
+      • تعرف الدوال باستخدام <code>def</code>، ويمكنها إرجاع قيم باستخدام <code>return</code>:
+    </p>
+    <pre><code>def greet(name):
+    """Prints a greeting."""
+    return f"Hello, {name}!"
+
+message = greet("Bob")
+print(message)  # Hello, Bob!</code></pre>
+    <p>
+      • يمكن للدوال أخذ معلمات افتراضية (<code>default arguments</code>):
+    </p>
+    <pre><code>def power(base, exp=2):
+    return base ** exp
+
+print(power(5))     # 25
+print(power(5, 3))  # 125</code></pre>
+  </div>
+
+  <div class="section">
+    <h2>4. Classes &amp; OOP</h2>
+    <p>
+      • تستعمل الفئة (<code>class</code>) لتعريف كائنات مع خصائص وسلوك:
+    </p>
+    <pre><code>class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def say_hello(self):
+        print(f"Hi, I'm {self.name} and I'm {self.age}.")
+
+p = Person("Eve", 28)
+p.say_hello()  # Hi, I'm Eve and I'm 28.</code></pre>
+    <p>
+      • <strong>Inheritance</strong> لوراثة الخصائص من صنف آخر:
+    </p>
+    <pre><code>class Student(Person):
+    def __init__(self, name, age, major):
+        super().__init__(name, age)
+        self.major = major</code></pre>
+  </div>
+
+  <div class="section">
+    <h2>5. Modules &amp; Packages</h2>
+    <p>
+      • لتنظيم الكود نقسمه إلى ملفات (<code>.py</code>) ونستوردها:
+    </p>
+    <pre><code># In math_utils.py
+def add(a, b):
+    return a + b
+
+# In main.py
+from math_utils import add
+print(add(2, 3))  # 5</code></pre>
+    <p>
+      • لإنشاء حزمة ضع ملف <code>__init__.py</code> داخل المجلد.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>6. Exceptions</h2>
+    <p>
+      • استخدم <code>try/except</code> للتعامل مع الأخطاء:
+    </p>
+    <pre><code>try:
+    x = int("abc")
+except ValueError as e:
+    print("Conversion failed:", e)
+finally:
+    print("Done.")</code></pre>
+  </div>
+
+  <div class="section">
+    <h2>7. File Handling</h2>
+    <p>
+      • لقراءة/كتابة الملفات استخدم:
+    </p>
+    <pre><code>with open("data.txt", "r") as file:
+    content = file.read()
+
+with open("out.txt", "w") as file:
+    file.write("Hello, file!")</code></pre>
+  </div>
+
+  <div class="section">
+    <h2>8. List Comprehensions</h2>
+    <p>
+      • صيغة مختصرة لإنشاء قوائم:
+    </p>
+    <pre><code>squares = [x**2 for x in range(10)]
+evens = [x for x in range(10) if x % 2 == 0]</code></pre>
+  </div>
+
+  <div class="section">
+    <h2>9. Useful Resources</h2>
+    <ul>
+      <li><a href="https://docs.python.org/3/tutorial/" target="_blank">The Official Python Tutorial</a></li>
+      <li><a href="https://realpython.com/" target="_blank">Real Python</a></li>
+      <li><a href="https://learnpython.org/" target="_blank">LearnPython.org</a></li>
+    </ul>
+  </div>
+
+</body>
+</html>

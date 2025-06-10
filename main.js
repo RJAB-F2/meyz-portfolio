@@ -78,8 +78,4 @@ buttons.forEach(btn => {
   btn.addEventListener('click', (e) => {
     e.preventDefault();  // منع عمل الرابط (لأن href="#" حالياً)
     btn.classList.add('clicked');
-    // إزالة التأثير بعد فترة قصيرة
-    setTimeout(() => btn.classList.remove('clicked'), 150);
-    // لاحقاً: يمكن إزالة preventDefault إذا كانت الروابط حقيقية
-  });
-});
+   
